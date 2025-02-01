@@ -121,6 +121,8 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
+//import Dashboard from "./Components/Dashboard"; 
+import PrivateRoute from "./Components/PrivateRoute"; 
 import "./App.css"; 
 
 function App() {
@@ -135,12 +137,12 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        
+       
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
-
-
