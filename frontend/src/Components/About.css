@@ -1,0 +1,47 @@
+/* About Section Styles */
+#about {
+    background: linear-gradient(135deg, #000000);
+  }
+  
+  .about-content {
+    max-width: 800px;
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #000000;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .about-content h2 {
+    color: #000000;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-content p {
+    margin-bottom: 1rem;
+    color: #666;
+    line-height: 1.8;
+  }
+  
+  .about-content ul {
+    list-style: none;
+    margin: 1.5rem 0;
+  }
+  
+  .about-content li {
+    margin: 1rem 0;
+    color: #000000;
+    font-weight: bold;
+  }
+  

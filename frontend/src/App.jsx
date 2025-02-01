@@ -27,7 +27,7 @@ function App() {
 
 
 
-import React from "react";
+/*import React from "react";
 import Navbar from "./Components/Navbar";
 import { Element } from "react-scroll";
 import "./App.css"; // Import global styles
@@ -52,6 +52,25 @@ function App() {
         <h2>Contact Us</h2>
         <p>Phone: 1234567890</p>
       </Element>
+    </div>
+  );
+}
+
+export default App;*/
+import React from "react";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import './App.css'; // import global styles here
+
+function App() {
+  return (
+    <div>
+      <Navbar />
+      <Home />
+      <About />
+      <Contact />
     </div>
   );
 }

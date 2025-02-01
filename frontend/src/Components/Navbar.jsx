@@ -26,7 +26,7 @@ const Navbar = () => {
 }; */
 
 
-import React from "react";
+/*import React from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css"; 
 
@@ -49,4 +49,22 @@ export default Navbar;
 
 
 ;
+*/
+import React from "react";
+import './Navbar.css'; // import navbar-specific styles here
 
+const Navbar = () => {
+  return (
+    <nav>
+      <div className="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#signup">Sign Up</a>
+        <a href="#login">Login</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
