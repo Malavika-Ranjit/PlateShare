@@ -1,4 +1,21 @@
 /* Centering the auth container */
+body {
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  background: url('https://thumbs.dreamstime.com/b/fresh-organic-vegetables-spoons-rustic-wooden-background-top-view-border-healthy-food-vegetarian-cooking-concept-63781109.jpg');
+  background-size: cover; /* Ensures the background covers the entire page */
+  background-attachment: fixed; /* Optional: This will make the background stay fixed while scrolling */
+}
+
+/* Header styles (navbar, etc.) */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  position: relative; /* Ensures header doesn't interfere with centering */
+}
+
 .auth-container {
     width: 100%;
     max-width: 400px;
@@ -8,11 +25,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
+    
   }
   
   .auth-container h2 {
     margin-bottom: 20px;
     color: #333;
+    
   }
   
   /* Styling input fields */
@@ -23,6 +42,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    
   }
   
   /* Styling the dropdown (role selector) */
@@ -60,6 +80,7 @@
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
+    
   }
   
   .auth-container a:hover {
@@ -71,6 +92,7 @@
     .auth-container {
       width: 90%;
       padding: 15px;
+      
     }
   }
   
