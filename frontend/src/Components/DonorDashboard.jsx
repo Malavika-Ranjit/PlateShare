@@ -27,7 +27,7 @@ const DonorDashboard = () => {
 export default DonorDashboard;*/
 
 // src/components/DonorDashboard.jsx
-import React from 'react';
+/*import React from 'react';
 import './DonorDashboard.css'; 
 
 const DonorDashboard = () => {
@@ -50,5 +50,87 @@ const DonorDashboard = () => {
   );
 };
 
-export default DonorDashboard;
+export default DonorDashboard;*/
 
+import React, { useState, useEffect } from 'react';
+import { db } from '../firebase'; // Import Firestore instance
+import { collection, addDoc } from 'firebase/firestore';
+import './DonorDashboard.css';
+
+const DonorDashboard = ({ addListing }) => {
+  const [newListing, setNewListing] = useState({
+    name: '',
+    quantity: 0,
+    expiry: '',
+    contactNumber: ''
+  });
+
+  // Function to handle adding a new listing to Firestore
+  const handleAddListing = async () => {
+    try {
+      const newDocRef = await addDoc(collection(db, 'donors'), {
+        name: newListing.name,
+        quantity: newListing.quantity,
+        expiry: newListing.expiry,
+        contactNumber: newListing.contactNumber,
+      });
+
+      // // Call addListing prop function to update listings in FoodListingsPage
+      // addListing({
+      //   id: newDocRef.id,
+      //   name: newListing.name,
+      //   quantity: newListing.quantity,
+      //   expiry: newListing.expiry,
+      //   contactNumber: newListing.contactNumber
+      // });
+
+      // Clear input fields after adding the listing
+      setNewListing({
+        name: '',
+        quantity: 0,
+        expiry: '',
+        contactNumber: ''
+      });
+    } catch (error) {
+      console.error('Error adding listing: ', error);
+    }
+  };
+
+  return (
+    <div className="donor-dashboard">
+      <h3>Your Food Listings</h3>
+
+      {/* Form to add new listing */}
+      <div>
+        <h4>Add New Listing</h4>
+        <input
+          type="text"
+          placeholder="Item Name"
+          value={newListing.name}
+          onChange={(e) => setNewListing({ ...newListing, name: e.target.value })}
+        />
+        <input
+          type="number"
+          placeholder="Quantity"
+          value={newListing.quantity}
+          onChange={(e) => setNewListing({ ...newListing, quantity: e.target.value })}
+        />
+        <input
+          type="date"
+          placeholder="Expiry Date"
+          value={newListing.expiry}
+          onChange={(e) => setNewListing({ ...newListing, expiry: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Contact Number"
+          value={newListing.contactNumber}
+          onChange={(e) => setNewListing({ ...newListing, contactNumber: e.target.value })}
+        />
+        <button onClick={handleAddListing}>Add Listing</button>
+      </div>
+    </div>
+  );
+};
+
+export default DonorDashboard;

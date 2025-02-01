@@ -26,8 +26,8 @@ export default DashboardPage; */
 import React from 'react';
 import './DashboardPage.css'; // Your custom styles for DashboardPage
 import { Link } from 'react-router-dom';
-import DonorDashboard from '../components/DonorDashboard';
-import RecipientDashboard from '../components/RecipientDashboard';
+import DonorDashboard from '../Components/DonorDashboard';
+import RecipientDashboard from '../Components/RecipientDashboard';
 
 const DashboardPage = () => {
   // Get the role from localStorage
