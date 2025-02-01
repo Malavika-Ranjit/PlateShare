@@ -57,7 +57,8 @@ function App() {
 }
 
 export default App;*/
-import React from "react";
+
+/*import React from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import About from "./Components/About";
@@ -75,5 +76,65 @@ function App() {
   );
 }
 
+export default App;*/
+
+/*import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
+import "./App.css"; // Import global styles
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App; */
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar"; 
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
+import "./App.css"; 
+
+function App() {
+  return (
+    <Router>
+      {/* Navbar is OUTSIDE Routes so it stays visible */}
+      <Navbar />  
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
+  );
+}
+
 export default App;
+
+
 

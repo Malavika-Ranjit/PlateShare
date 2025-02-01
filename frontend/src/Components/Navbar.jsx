@@ -50,7 +50,8 @@ export default Navbar;
 
 ;
 */
-import React from "react";
+
+/*import React from "react";
 import './Navbar.css'; // import navbar-specific styles here
 
 const Navbar = () => {
@@ -67,4 +68,29 @@ const Navbar = () => {
   );
 };
 
+export default Navbar;*/
+
+
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css"; // Ensure this file exists
+
+const Navbar = () => {
+  return (
+    <nav className="navbar"> {/* Correct class name */}
+      <h1 className="logo">PlateShare</h1>  
+      <ul className="nav-links"> {/* Correct class name */}
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/register">Register</Link></li>
+      </ul>
+    </nav>
+  );
+};
+
 export default Navbar;
+
+
+
