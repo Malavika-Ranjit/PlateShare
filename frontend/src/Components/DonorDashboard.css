@@ -1,0 +1,87 @@
+/* src/components/DonorDashboard.css */
+/*.donor-dashboard {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .donor-dashboard ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .donor-dashboard li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .donor-dashboard button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e67e22;
+  } */
+
+
+  /* DonorDashboard.css */
+
+.donor-dashboard {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donor-dashboard h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.donor-dashboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.donor-dashboard li {
+  background-color: #fff;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donor-dashboard button {
+  display: block;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.donor-dashboard button:hover {
+  background-color: #45a049;
+}
+
+.donor-dashboard li span {
+  font-weight: bold;
+}
+
+  
