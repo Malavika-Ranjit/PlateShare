@@ -1,5 +1,5 @@
-import React from "react";
-import './Contact.css'; // Import the CSS for the Contact component (if needed)
+import React from 'react';
+import './Contact.css';
 
 const Contact = () => {
   return (
@@ -9,6 +9,6 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Contact;

@@ -53,6 +53,8 @@ export default Navbar;
 
 /*import React from "react";
 import './Navbar.css'; // import navbar-specific styles here
+import React from 'react';
+import './Navbar.css';
 
 const Navbar = () => {
   return (
@@ -66,7 +68,7 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;*/
 

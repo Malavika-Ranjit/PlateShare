@@ -1,5 +1,5 @@
-import React from "react";
-import './Home.css'; // Import the CSS for the Home component (if needed)
+import React from 'react';
+import './Home.css';
 
 const Home = () => {
   return (
@@ -11,6 +11,6 @@ const Home = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Home;
