@@ -79,13 +79,17 @@ const DonorDashboard = () => {
       await addDoc(collection(db, "donors"), {
         name: newListing.name,
         quantity: newListing.quantity,
-        expiry: newListing.expiry,
+        expiry: new Date(new Listening.expiry),
         contactNumber: newListing.contactNumber,
-        donorEmail, // Store donor's email in Firestore
-        status: "Available",
       });
-
-      alert("Listing added successfully!");
+      // Call addListing prop function to update listings in FoodListingsPage
+      // addListing({
+      //   id: newDocRef.id,
+      //   name: newListing.name,
+      //   quantity: newListing.quantity,
+      //   expiry: newListing.expiry,
+      //   contactNumber: newListing.contactNumber
+      // });
 
       // Clear input fields after adding the listing
       setNewListing({

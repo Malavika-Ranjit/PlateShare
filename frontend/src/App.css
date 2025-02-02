@@ -320,7 +320,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('https://thumbs.dreamstime.com/b/fresh-organic-vegetables-spoons-rustic-wooden-background-top-view-border-healthy-food-vegetarian-cooking-concept-63781109.jpg');
+  background: url('https://previews.123rf.com/images/klenova/klenova1509/klenova150900063/45304678-wooden-spoon-and-ingredients-on-old-background-vegetarian-food-health-or-cooking-concept.jpg');
   background-size: cover;
 }
 
@@ -367,14 +367,14 @@ section {
 
 /* Contact Section */
 #contact {
-  background: url('https://thumbs.dreamstime.com/b/fresh-organic-vegetables-spoons-rustic-wooden-background-top-view-border-healthy-food-vegetarian-cooking-concept-63781109.jpg');
+  background: url('https://previews.123rf.com/images/klenova/klenova1509/klenova150900063/45304678-wooden-spoon-and-ingredients-on-old-background-vegetarian-food-health-or-cooking-concept.jpg');
   background-size: cover;
 }
 
 .contact-info {
   font-size: 2rem;
   font-weight: bold;
-  color: white;
+  color: black;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;

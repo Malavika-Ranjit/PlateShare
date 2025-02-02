@@ -104,7 +104,16 @@
 }*/
 
 /* DashboardPage.css */
-
+.dashboard-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #bdc3c7;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size:2rem;
+}
 .centered-content {
   display: flex;
   flex-direction: column;
@@ -112,16 +121,19 @@
   justify-content: center;
   text-align: center;
   margin-top: 30px;
+  background: rgba(255, 255, 255, 0.5);
+
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #2c3e50;
   margin-bottom: 30px;
 }
 
 .link-container {
   margin-top: 20px;
+  font-size: 1.2rem;
 }
 
 .link-container a {
