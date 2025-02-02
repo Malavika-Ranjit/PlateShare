@@ -46,7 +46,7 @@ const DashboardPage = () => {
       {userRole === "Donor" ? <DonorDashboard /> : <RecipientDashboard />}
 
       <div className="link-container">
-        <Link to="/food-listings">Go to Food Listings</Link>
+        {/* <Link to="/food-listings">Go to Food Listings</Link> */}
       </div>
     </div>
   );

@@ -52,47 +52,50 @@ const DonorDashboard = () => {
 
 export default DonorDashboard;*/
 
-import React, { useState, useEffect } from 'react';
-import { db } from '../firebase'; // Import Firestore instance
-import { collection, addDoc } from 'firebase/firestore';
-import './DonorDashboard.css';
+import React, { useState, useEffect } from "react";
+import { db } from "../firebase"; // Import Firestore instance
+import { collection, addDoc } from "firebase/firestore";
+import "./DonorDashboard.css";
 
-const DonorDashboard = ({ addListing }) => {
+const DonorDashboard = () => {
   const [newListing, setNewListing] = useState({
-    name: '',
+    name: "",
     quantity: 0,
-    expiry: '',
-    contactNumber: ''
+    expiry: "",
+    contactNumber: "",
   });
+
+  // Retrieve donor email from localStorage (stored at login)
+  const donorEmail = localStorage.getItem("userEmail");
 
   // Function to handle adding a new listing to Firestore
   const handleAddListing = async () => {
+    if (!donorEmail) {
+      alert("Error: Donor email not found. Please log in again.");
+      return;
+    }
+
     try {
-      const newDocRef = await addDoc(collection(db, 'donors'), {
+      await addDoc(collection(db, "donors"), {
         name: newListing.name,
         quantity: newListing.quantity,
         expiry: newListing.expiry,
         contactNumber: newListing.contactNumber,
+        donorEmail, // Store donor's email in Firestore
+        status: "Available",
       });
 
-      // // Call addListing prop function to update listings in FoodListingsPage
-      // addListing({
-      //   id: newDocRef.id,
-      //   name: newListing.name,
-      //   quantity: newListing.quantity,
-      //   expiry: newListing.expiry,
-      //   contactNumber: newListing.contactNumber
-      // });
+      alert("Listing added successfully!");
 
       // Clear input fields after adding the listing
       setNewListing({
-        name: '',
+        name: "",
         quantity: 0,
-        expiry: '',
-        contactNumber: ''
+        expiry: "",
+        contactNumber: "",
       });
     } catch (error) {
-      console.error('Error adding listing: ', error);
+      console.error("Error adding listing: ", error);
     }
   };
 
@@ -107,25 +110,33 @@ const DonorDashboard = ({ addListing }) => {
           type="text"
           placeholder="Item Name"
           value={newListing.name}
-          onChange={(e) => setNewListing({ ...newListing, name: e.target.value })}
+          onChange={(e) =>
+            setNewListing({ ...newListing, name: e.target.value })
+          }
         />
         <input
           type="number"
           placeholder="Quantity"
           value={newListing.quantity}
-          onChange={(e) => setNewListing({ ...newListing, quantity: e.target.value })}
+          onChange={(e) =>
+            setNewListing({ ...newListing, quantity: e.target.value })
+          }
         />
         <input
           type="date"
           placeholder="Expiry Date"
           value={newListing.expiry}
-          onChange={(e) => setNewListing({ ...newListing, expiry: e.target.value })}
+          onChange={(e) =>
+            setNewListing({ ...newListing, expiry: e.target.value })
+          }
         />
         <input
           type="text"
           placeholder="Contact Number"
           value={newListing.contactNumber}
-          onChange={(e) => setNewListing({ ...newListing, contactNumber: e.target.value })}
+          onChange={(e) =>
+            setNewListing({ ...newListing, contactNumber: e.target.value })
+          }
         />
         <button onClick={handleAddListing}>Add Listing</button>
       </div>

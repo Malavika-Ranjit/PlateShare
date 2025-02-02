@@ -25,8 +25,9 @@ const Login = () => {
       await signInWithEmailAndPassword(auth, email, password);
       alert(`Login successful as ${role}!`);
 
-      // Store the selected role in localStorage
+      // Store the selected role and email in localStorage
       localStorage.setItem("userRole", role);
+      localStorage.setItem("userEmail", email);
       
       navigate("/dashboard"); // Redirect to Dashboard after login
     } catch (error) {
